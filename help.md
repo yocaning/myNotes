@@ -1,7 +1,7 @@
 ---
 description: 欢迎每一个抒发生活的人
 ---
-#### [文章传送门](https://yocan.gitbook.io/mynotes/)
+####  :octocat: [文章传送门](https://yocan.gitbook.io/mynotes/)
 
 ```text
     开放接受文章贡献， 大家互相交流知识，互相调侃生活。
