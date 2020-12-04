@@ -1,5 +1,5 @@
 # Table of contents
 
 * [主页](README.md)
-* [贡献文章说明](HELP.md)
+* [贡献文章说明](help.md)
 
