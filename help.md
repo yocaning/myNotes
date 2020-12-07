@@ -12,7 +12,7 @@ description: 欢迎每一个抒发生活的人
 
 * 我要如何贡献文章
   * 首先git clone当前 [项目](https://github.com/yocaning/myNotes) 至本地（建议顺便素质三连）
-  * 创建个人文章分支
+  * 创建个人文章分支（ex:yocan）
   * 完成个人文章撰写
   * 在SUMMARY.md 文件中加上你的目录，以及相应的文件
   * commit and push
