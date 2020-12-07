@@ -3,7 +3,7 @@
 * [主页](README.md)
 * [xiayu](./xiayuliu_learning/go1.md)
 * [yocan](./yocan)
-    * [随想](yocan/shareAboutGC.md)
+    * [GC随想](yocan/shareAboutGC.md)
 * [贡献文章说明](help.md)
 
 

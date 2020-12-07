@@ -1,4 +1,4 @@
-# Share about GC
+# GC随想【Share about GC】
 
 ```
 When is the best time to do a GC? When nobody is looking. 
