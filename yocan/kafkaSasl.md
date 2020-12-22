@@ -12,7 +12,6 @@
 - SASL/PLAIN将密码作为明文传输(可以通过二次开发自行进行补充)，应该仅与SSL作为传输层一起使用，以确保在没有加密的情况下不会在网络上传输清晰的密码。
 - Kafka中SASL/PLAIN的默认实现在JAAS配置文件中指定用户名和密码。您可以通过配置您自己的回调处理程序，
 使用配置选项sasl.server.callback.handler.class和sasl.client.callback.handler.class来从外部源获取用户名和密码，从而避免在磁盘上存储干净的密码。
-  - 
 
 #### 配置步骤 <以PLAIN 为例>
 ##### Brokers
