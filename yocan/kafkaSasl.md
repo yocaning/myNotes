@@ -39,6 +39,67 @@
 ```
 
 - 开始配置
+    1. 在服务器中启用SASL/PLAIN机制。每个代理的【server.properties】属性文件。
+    ```
+      # List of enabled mechanisms, can be more than one
+      sasl.enabled.mechanisms=PLAIN
+      
+      # Specify one of of the SASL mechanisms
+      sasl.mechanism.inter.broker.protocol=PLAIN
+  ```
+    2. 如果您希望为代理间通信启用SASL，请将以下内容添加到代理属性文件中(默认PLAINTEXT)。将协议设置为:
+        - SASL_SSL: 如果启用了SSL加密(如果SASL机制是普通的，则应该始终使用SSL加密)
+        - SASL_PLAINTEXT：如果没有启用SSL加密
+        ```
+       # Configure SASL_SSL if SSL encryption is enabled, otherwise configure SASL_PLAINTEXT
+       security.inter.broker.protocol=SASL_SSL
+       ```
+    3.告诉Kafka broker监听客户端和代理间SASL连接的端口。您必须配置listeners。advertised.listeners可选，如果值与 listeners 不同。设置监听器为:
+    ```
+      # With SSL encryption
+      listeners=SASL_SSL://kafka1:9092
+      advertised.listeners=SASL_SSL://localhost:9092
+      
+      # Without SSL encryption
+      listeners=SASL_PLAINTEXT://kafka1:9092
+      advertised.listeners=SASL_PLAINTEXT://localhost:9092
+  ```
+    4. 配置SASL_SSL和PLAINTEXT端口，比如:
+    ```
+      # With SSL encryption
+      listeners=PLAINTEXT://kafka1:9092,SASL_SSL://kafka1:9093
+      advertised.listeners=PLAINTEXT://localhost:9092,SASL_SSL://localhost:9093
+      
+      # Without SSL encryption
+      listeners=PLAINTEXT://kafka1:9092,SASL_PLAINTEXT://kafka1:9093
+      advertised.listeners=PLAINTEXT://localhost:9092,SASL_PLAINTEXT://localhost:9093
+  ```
+    5.**如果你没有使用单独的JAAS配置文件来配置JAAS，那么为Kafka broker监听器配置JAAS如下所示**:
+    ```
+      # With SSL encryption
+      listener.name.sasl_ssl.plain.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required \
+         username="admin" \
+         password="admin-secret" \
+         user_admin="admin-secret" \
+         user_kafkabroker1="kafkabroker1-secret";
+      
+      # Without SSL encryption
+      listener.name.sasl_plaintext.plain.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required \
+         username="admin" \
+         password="admin-secret" \
+         user_admin="admin-secret" \
+         user_kafkabroker1="kafkabroker1-secret";
+  ```
+       
+#### 最后
+- 配置完成之后，启动broker就可以了
+- 需要注意的是：如果采用kafka自带的producer和consumer console 工具，需要修改对应的producer.properties和consumer.properties
+                    
+
+
+       
+
+      
 
 
 
