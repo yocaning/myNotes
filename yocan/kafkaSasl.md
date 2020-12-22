@@ -1,4 +1,4 @@
-# kafka 配置SASL验证
+# kafka 配置SASL验证 
 
 ```
 做一个推送kafka服务，需要支持kafka免密和SASL验证
