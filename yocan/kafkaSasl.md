@@ -13,7 +13,7 @@
 - Kafka中SASL/PLAIN的默认实现在JAAS配置文件中指定用户名和密码。您可以通过配置您自己的回调处理程序，
 使用配置选项sasl.server.callback.handler.class和sasl.client.callback.handler.class来从外部源获取用户名和密码，从而避免在磁盘上存储干净的密码。
 
-#### 配置步骤 <以PLAIN 为例>
+#### PLAIN配置步骤
 ##### Brokers
 - 配置Kafka集群中的所有broker以接受来自客户端的安全连接。对代理所做的任何配置更改都需要滚动重新启动。<这也是PLAIN方案存在的问题，如果新增用户需要重启broker>
       
