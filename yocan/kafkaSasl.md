@@ -64,7 +64,7 @@
       # Without SSL encryption
       listeners=SASL_PLAINTEXT://kafka1:9092
       advertised.listeners=SASL_PLAINTEXT://localhost:9092
-  ```
+    ```
     4. 配置SASL_SSL和PLAINTEXT端口，比如:
     ```
       # With SSL encryption
@@ -74,7 +74,7 @@
       # Without SSL encryption
       listeners=PLAINTEXT://kafka1:9092,SASL_PLAINTEXT://kafka1:9093
       advertised.listeners=PLAINTEXT://localhost:9092,SASL_PLAINTEXT://localhost:9093
-  ```
+    ```
     5.**如果你没有使用单独的JAAS配置文件来配置JAAS，那么为Kafka broker监听器配置JAAS如下所示**:
     ```
       # With SSL encryption
@@ -90,7 +90,7 @@
          password="admin-secret" \
          user_admin="admin-secret" \
          user_kafkabroker1="kafkabroker1-secret";
-  ```
+    ```
        
 #### 写在最后
 - 配置完成之后，启动broker就可以了
@@ -106,9 +106,7 @@
     password="test";
     ```
 
+---
 
-```markdown
 
-其他类型配置可以翻阅[官方文档](https://docs.confluent.io/platform/current/kafka/authentication_sasl/index.html)
-
-```
+>其他类型配置可以翻阅[官方文档](https://docs.confluent.io/platform/current/kafka/authentication_sasl/index.html)
