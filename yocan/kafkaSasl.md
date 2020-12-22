@@ -22,8 +22,9 @@
     - 一个方法是采用JAAS文件进行用户相关信息的设置 for example :kafka_server_jaas.conf
     - 每个KafkaServer/Broker使用JAAS文件中的KafkaServer部分为Broker提供SASL配置选项，包括任何由Broker建立的用于Broker间通信的SASL客户端连接。
       如果将多个侦听器配置为使用SASL，您可以在部分名称前加上侦听器名称的小写前缀，后跟句号(例如，sasl_ssl.KafkaServer.)。
-    - 【不推荐】这种方式还需要修改启动脚本，需要增加：-Djava.security.auth.login.config=$base_dir/../config/kafka_server_plain_jaas.conf
-```
+    - 【不推荐】这种方式需要修改启动脚本，需要增加：
+    -Djava.security.auth.login.config=$base_dir/../config/kafka_server_plain_jaas.conf
+    ```
        KafkaClient {
        org.apache.kafka.common.security.plain.PlainLoginModule required
        username="admin"
@@ -36,7 +37,7 @@
        username="admin"
        password="test";
        };
-```
+    ```
 
 - 开始配置
     1. 在服务器中启用SASL/PLAIN机制。每个代理的【server.properties】属性文件。
