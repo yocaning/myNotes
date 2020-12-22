@@ -91,21 +91,23 @@
          user_kafkabroker1="kafkabroker1-secret";
   ```
        
-#### 最后
+#### 写在最后
 - 配置完成之后，启动broker就可以了
-- 需要注意的是：如果采用kafka自带的producer和consumer console 工具，需要修改对应的producer.properties和consumer.properties
-                    
-
-
-       
-
-      
-
-
-
-
+- 需要注意的是：如果采用kafka自带的producer和consumer console 工具进行测试，需要修改对应的producer.properties和consumer.properties
+  增加如下配置：
+  ```
+    sasl.mechanism=PLAIN
+    # Configure SASL_SSL if SSL encryption is enabled, otherwise configure SASL_PLAINTEXT
+    security.protocol=SASL_SSL
+  
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required \
+    username="test" \
+    password="test";
+    ```
 
 
 ```markdown
+
 其他类型配置可以翻阅[官方文档](https://docs.confluent.io/platform/current/kafka/authentication_sasl/index.html)
+
 ```
