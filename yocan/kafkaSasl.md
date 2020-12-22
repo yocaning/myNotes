@@ -47,7 +47,7 @@
       
       # Specify one of of the SASL mechanisms
       sasl.mechanism.inter.broker.protocol=PLAIN
-  ```
+    ```
     2. 如果您希望为代理间通信启用SASL，请将以下内容添加到代理属性文件中(默认PLAINTEXT)。将协议设置为:
         - SASL_SSL: 如果启用了SSL加密(如果SASL机制是普通的，则应该始终使用SSL加密)
         - SASL_PLAINTEXT：如果没有启用SSL加密
@@ -56,6 +56,7 @@
        security.inter.broker.protocol=SASL_SSL
        ```
     3.告诉Kafka broker监听客户端和代理间SASL连接的端口。您必须配置listeners。advertised.listeners可选，如果值与 listeners 不同。设置监听器为:
+    
     ```
       # With SSL encryption
       listeners=SASL_SSL://kafka1:9092
