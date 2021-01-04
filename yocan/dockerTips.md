@@ -22,10 +22,14 @@
     ```
 - 删除docker容器/镜像
     ```
+    docker ps -a 可以看到因为异常down掉的容器
     docker rm -f  <容器ID>
     docker rmi    <镜像ID>
     ```
   
 - 调试docker 启动时
-    - 可以在docker 启动参数上加上 -v /test(宿主机目录):/root(镜像目录)方便查看相关日志等
-    - 直接查看docker启动日志可以用 docker  logs <容器id>
+    - 可以在docker run 启动参数上加上 -v /test(宿主机目录):/root(镜像目录)方便查看相关日志等
+    - 直接查看docker启动日志可以用 
+    ```
+    docker  logs <容器id>
+    ```
