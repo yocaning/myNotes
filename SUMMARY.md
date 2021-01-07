@@ -8,6 +8,7 @@
     * [kafka 配置SASL验证](yocan/kafkaSasl.md)
     * [docker 安装kafka和zookeeper](yocan/dockerKafkaZookeeper.md)
     * [docker 小tips记录](yocan/dockerTips.md)
+    * [模拟测试网络状况 小tips记录](yocan/testNetworkTips.md)
 * [贡献文章说明](help.md)
 
 
