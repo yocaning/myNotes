@@ -70,3 +70,10 @@
     ```
     iptables -I OUTPUT -d 9.**.102.154 -m statistic --mode random --probability 0.5 -j DROP
     ```
+#### 测试情况
+- 没有配置规则前：没有丢包现象
+  ![命令](../image/1.png)
+  ![ping情况](../image/2.png)
+- 配置50%丢包比例规则后：丢包比例64%（应该是样本数据比较小，大的时候应该会趋近于50%）
+  ![命令](../image/3.png)
+  ![ping情况](../image/4.png)
