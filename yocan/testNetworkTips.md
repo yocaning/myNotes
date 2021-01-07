@@ -70,6 +70,7 @@
     ```
     iptables -I OUTPUT -d 9.**.102.154 -m statistic --mode random --probability 0.5 -j DROP
     ```
+  
 #### 测试情况
 - 没有配置规则前：没有丢包现象
   ![命令](../image/1.png)
