@@ -5,7 +5,7 @@
     * [5个月社招字节面试总结](xiayuliu_learning/bytedanceInterviewSummary.md)
 * [yocan](./yocan)
     * [GC随想](yocan/shareAboutGC.md)
-    * [kafka威慑呢们这么快](yocan/kafka.md)
+    * [kafka为什么这么快](yocan/kafka.md)
     * [kafka 配置SASL验证](yocan/kafkaSasl.md)
     * [docker 安装kafka和zookeeper](yocan/dockerKafkaZookeeper.md)
     * [docker 小tips记录](yocan/dockerTips.md)
