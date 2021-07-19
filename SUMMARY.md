@@ -4,7 +4,7 @@
 * [xiayu](./xiayuliu_learning)
     * [5个月社招字节面试总结](xiayuliu_learning/bytedanceInterviewSummary.md)
 * [hui](./lianghui)
-    * [test](lianghui/readme.md)
+    * [面试问题总结](lianghui/question.md)
 * [yocan](./yocan)
     * [GC随想](yocan/shareAboutGC.md)
     * [kafka为什么这么快](yocan/kafka.md)
